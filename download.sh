@@ -4,12 +4,12 @@
 # delete old csv catalog (suppress errors)
 rm data_gov_catalog.csv 2>/dev/null
 # download csv format
-wget "http://www.data.gov/download/92/csv"
+wget "http://www.data.gov/download/92/csv" -O data_gov_catalog.csv
 
 
 # delete old rdf catalog (suppress errors)
 rm dataset-92.rdf 2>/dev/null
 # download rdf format
-wget "http://www.data.gov/download/92/rdf"
+wget "http://www.data.gov/download/92/rdf" -O dataset-92.rdf.gz
 # extract gzipped rdf
 gunzip "dataset-92.rdf.gz"
